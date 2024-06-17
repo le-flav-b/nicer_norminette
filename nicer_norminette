@@ -40,4 +40,11 @@ function show_help() {
 	echo
 }
 
+function show_error() {
+
+	echo -n "nicer_norminette: error"
+	[ -n "$1" ] && echo ": $1" || echo
+	echo "Try 'nicer_norminette --help' for more information."
+}
+
 show_help
