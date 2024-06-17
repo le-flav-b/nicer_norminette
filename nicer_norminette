@@ -1,0 +1,43 @@
+#!/bin/bash
+
+
+# colors
+reset='\033[0m'
+Bwhite='\033[1;37m'
+Iwhite='\033[0;97m'
+blue='\033[38;5;32m'
+
+
+function show_help() {
+
+	echo
+	echo -e "This is an improvement for the norminette made by ${blue}flboulea${reset}."
+	echo
+	echo "USAGE :"
+	echo -e "  ${Bwhite}nicer_norminette [-rt] [-a] [TARGETS]${reset}"
+	echo
+	echo "OPTIONS :"
+	echo "  -h,  --help		show this message."
+	echo "  -o,  --open		open the norm pdf."
+	echo -e "  -rt, --real-time	continually check and refresh ${Iwhite}(ctrl + c to escape)${reset}."
+	echo "  -a,  --all		bypass .normignore files."
+	echo
+	echo "TARGETS :"
+	echo "  If no TARGETS are specified, the current directory is used."
+	echo "  You can specify files or directories."
+	echo "  You can add a .normignore file between the current folder and the target."
+	echo
+	echo ".normignore :"
+	echo "  Each line of the .normignore file is a pattern to ignore."
+	echo "  You can use '*', '?' and '**' as wildcards."
+	echo
+	echo
+	echo "Please note that the verification of the norm remains carried out by the official norminette of 42."
+	echo "It must therefore be installed and in the path."
+	echo "This program only formats the output of the real norminette and adds some useful options."
+	echo -e "If you have any questions, suggestions or bugs you can contact me at ${Iwhite}flboulea@student.42.fr${reset}"
+	echo -e "or open an issue / pull request on the github repository (${Iwhite}https://github.com/le-flav-b/nicer_norminette${reset})."
+	echo
+}
+
+show_help
